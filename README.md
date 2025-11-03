@@ -47,34 +47,50 @@ There are no alternatives. This is the stack. It's proven, performant, and produ
 
 ## Installation
 
-### For Claude Code Users
+### As a Claude Code Plugin (Recommended)
 
-1. Clone this repository into your projects directory:
+Robin is a Claude Code plugin that installs with one command:
+
+1. **Add Robin to your plugin marketplace:**
+   ```bash
+   /plugin marketplace add swapkats/robin
+   ```
+
+2. **Install Robin:**
+   ```bash
+   /plugin install robin@swapkats-robin
+   ```
+
+3. **Restart Claude Code**
+
+4. **Start building!** Robin's skills are now automatically available. Just describe what you want to build and Robin activates automatically.
+
+### Quick Start
+
+Once installed, try:
+```
+/robin-init
+```
+
+This command will interactively create a complete Next.js + DynamoDB application with all Robin standards.
+
+Or just start naturally:
+```
+"Create a todo application with user authentication"
+```
+
+Robin recognizes the context and builds it for you automatically!
+
+### Manual Installation (Alternative)
+
+If you prefer not to use the plugin system:
+
 ```bash
-cd /path/to/your/projects
-git clone https://github.com/yourusername/robin.git
-```
+# Clone the repository
+git clone https://github.com/swapkats/robin.git
 
-2. Copy the `.claude/skills/` directory to your project:
-```bash
-cp -r robin/.claude/skills/* your-project/.claude/skills/
-```
-
-3. Invoke Robin in Claude Code:
-```
-Use the robin skill to build my application
-```
-
-### Standalone Usage
-
-You can also use Robin's skills directly in any Claude Code project by copying individual skills:
-
-```bash
-# Copy specific skills
-cp -r robin/.claude/skills/robin your-project/.claude/skills/
-cp -r robin/.claude/skills/building-nextjs-apps your-project/.claude/skills/
-cp -r robin/.claude/skills/designing-dynamodb-tables your-project/.claude/skills/
-cp -r robin/.claude/skills/deploying-to-aws your-project/.claude/skills/
+# Copy skills to your project
+cp -r robin/skills/* your-project/.claude/skills/
 ```
 
 ## Usage
@@ -121,29 +137,36 @@ Robin: [Sets up deployment:]
 - Provides deployment URL
 ```
 
-## Available Skills
+## Available Skills & Commands
 
-Robin consists of modular Agent Skills that work together:
+Robin includes modular Agent Skills that activate automatically based on your needs:
 
-### 1. robin (Main Orchestrator)
-The main skill that coordinates all others. Use this for high-level tasks.
+### Agent Skills
 
-**When to use:** Building complete applications, adding major features
+#### 1. robin (Main Orchestrator)
+**Auto-activates when:** Building complete applications, adding major features, creating new projects
 
-### 2. building-nextjs-apps
+The main skill that coordinates all others. Enforces Robin's opinionated philosophy and delegates to specialized skills.
+
+#### 2. building-nextjs-apps
+**Auto-activates when:** Implementing Next.js features, creating components, adding routes, working with Server Components or Server Actions
+
 Specialized in Next.js 15 App Router patterns, Server Components, and Server Actions.
 
-**When to use:** Implementing Next.js features, components, or routes
+#### 3. designing-dynamodb-tables
+**Auto-activates when:** Designing data models, creating schemas, optimizing queries, adding entities, working with DynamoDB access patterns
 
-### 3. designing-dynamodb-tables
 Expert in DynamoDB single-table design, access patterns, and query optimization.
 
-**When to use:** Designing data models, optimizing queries, adding entities
+#### 4. deploying-to-aws
+**Auto-activates when:** Deploying applications, configuring AWS resources, setting up infrastructure, working with SST or CloudFormation
 
-### 4. deploying-to-aws
 Handles AWS deployment, SST configuration, and infrastructure as code.
 
-**When to use:** Deploying applications, configuring AWS resources
+### Slash Commands
+
+#### /robin-init
+Interactive command to scaffold a complete Next.js + DynamoDB project with all Robin standards in seconds.
 
 ## Project Structure
 
