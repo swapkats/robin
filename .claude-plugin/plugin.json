@@ -5,6 +5,15 @@
   "version": "1.0.0",
   "author": {
     "name": "Swap Kats",
-    "email": "swap@example.com"
-  }
+    "email": "swap@swapkats.com"
+  },
+  "homepage": "https://github.com/swapkats/robin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swapkats/robin.git"
+  },
+  "license": "MIT",
+  "keywords": ["nextjs", "dynamodb", "aws", "typescript", "tailwind", "opinionated", "full-stack"],
+  "commands": "./commands",
+  "skills": "./skills"
 }
