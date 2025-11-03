@@ -54,35 +54,44 @@ There are no alternatives. This is the stack. It's proven, performant, and produ
 
 Robin is a Claude Code plugin that installs with one command:
 
-1. **Add Robin to your plugin marketplace:**
+1. **Add Robin marketplace to Claude Code:**
    ```bash
    /plugin marketplace add swapkats/robin
    ```
 
-2. **Install Robin:**
+2. **Install the Robin plugin:**
    ```bash
-   /plugin install robin@swapkats-robin
+   /plugin install robin
    ```
 
-3. **Restart Claude Code**
+3. **Restart Claude Code** for the plugin to be fully activated
 
-4. **Start building!** Robin's skills are now automatically available. Just describe what you want to build and Robin activates automatically.
+4. **Start building!** Robin's agent, skills, and commands are now available.
 
 ### Quick Start
 
-Once installed, try:
-```
+Once installed, you have several ways to use Robin:
+
+#### Use the Interactive Setup Command
+```bash
 /robin-init
 ```
 
-This command will interactively create a complete Next.js + DynamoDB application with all Robin standards.
+This command interactively creates a complete Next.js + DynamoDB application with all Robin standards.
 
-Or just start naturally:
+#### Use the Robin Agent
+Explicitly delegate to the Robin agent for complex project builds:
+```
+/task Use the robin agent to create a SaaS application with organizations and teams
+```
+
+#### Let Skills Auto-Activate
+Just describe what you want, and Robin's skills automatically activate:
 ```
 "Create a todo application with user authentication"
 ```
 
-Robin recognizes the context and builds it for you automatically!
+Robin's skills recognize the context and build it for you automatically!
 
 ### Manual Installation (Alternative)
 
@@ -92,8 +101,10 @@ If you prefer not to use the plugin system:
 # Clone the repository
 git clone https://github.com/swapkats/robin.git
 
-# Copy skills to your project
-cp -r robin/skills/* your-project/.claude/skills/
+# Copy components to your project
+cp -r robin/skills your-project/.claude/
+cp -r robin/agents your-project/.claude/
+cp -r robin/commands your-project/.claude/
 ```
 
 ## Usage
@@ -140,36 +151,52 @@ Robin: [Sets up deployment:]
 - Provides deployment URL
 ```
 
-## Available Skills & Commands
+## Available Components
 
-Robin includes modular Agent Skills that activate automatically based on your needs:
+Robin includes three types of components that work together:
 
-### Agent Skills
+### 1. Agent (Specialized Subagent)
 
-#### 1. robin (Main Orchestrator)
+#### robin
+**Use when:** Building complete applications from scratch, complex multi-feature projects, or when you want explicit control
+
+The Robin agent is a specialized subagent you can delegate to for autonomous, end-to-end application building. It follows the Explore → Plan → Build → Validate → Deploy workflow and enforces all Robin standards.
+
+**How to use:**
+```bash
+/task Use the robin agent to create a blog platform with posts and comments
+```
+
+### 2. Skills (Auto-Activating)
+
+Skills automatically activate based on conversation context. You don't need to explicitly invoke them.
+
+#### robin (Main Orchestrator Skill)
 **Auto-activates when:** Building complete applications, adding major features, creating new projects
 
 The main skill that coordinates all others. Enforces Robin's opinionated philosophy and delegates to specialized skills.
 
-#### 2. building-nextjs-apps
+#### building-nextjs-apps
 **Auto-activates when:** Implementing Next.js features, creating components, adding routes, working with Server Components or Server Actions
 
 Specialized in Next.js 15 App Router patterns, Server Components, and Server Actions.
 
-#### 3. designing-dynamodb-tables
+#### designing-dynamodb-tables
 **Auto-activates when:** Designing data models, creating schemas, optimizing queries, adding entities, working with DynamoDB access patterns
 
 Expert in DynamoDB single-table design, access patterns, and query optimization.
 
-#### 4. deploying-to-aws
+#### deploying-to-aws
 **Auto-activates when:** Deploying applications, configuring AWS resources, setting up infrastructure, working with SST or CloudFormation
 
 Handles AWS deployment, SST configuration, and infrastructure as code.
 
-### Slash Commands
+### 3. Commands (User-Invoked)
 
 #### /robin-init
 Interactive command to scaffold a complete Next.js + DynamoDB project with all Robin standards in seconds.
+
+**Usage:** Simply type `/robin-init` and answer the interactive prompts.
 
 ## Project Structure
 

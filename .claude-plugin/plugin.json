@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "robin",
   "description": "A hyper-opinionated agent for building production-ready Next.js apps with DynamoDB. Eliminates technology debates and focuses on shipping functional, tested, deployed applications.",
   "version": "1.0.0",
@@ -15,5 +14,6 @@
   "license": "MIT",
   "keywords": ["nextjs", "dynamodb", "aws", "typescript", "tailwind", "opinionated", "full-stack"],
   "commands": "./commands",
-  "skills": "./skills"
+  "skills": "./skills",
+  "agents": "./agents"
 }
