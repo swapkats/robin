@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "swapkats-robin",
+  "description": "Robin - A hyper-opinionated agent for building production-ready Next.js apps with DynamoDB",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Swap Kats",
+    "email": "swap@example.com"
+  },
+  "plugins": [
+    {
+      "name": "robin",
+      "source": ".",
+      "description": "A hyper-opinionated agent for building production-ready Next.js apps with DynamoDB. Eliminates technology debates and focuses on shipping functional, tested, deployed applications.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Swap Kats",
+        "email": "swap@example.com"
+      }
+    }
+  ]
+}
