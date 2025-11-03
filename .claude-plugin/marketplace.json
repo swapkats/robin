@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "robin",
-      "source": ".",
+      "source": "./",
       "description": "A hyper-opinionated agent for building production-ready Next.js apps with DynamoDB. Eliminates technology debates and focuses on shipping functional, tested, deployed applications.",
       "version": "1.0.0",
       "author": {
