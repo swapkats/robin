@@ -1,0 +1,6 @@
+"mcpServers": {
+    "tmux": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/jonrad/tmux-mcp", "tmux-mcp"]
+    },
+}
