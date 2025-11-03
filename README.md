@@ -1,5 +1,8 @@
 # Robin
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-blue)](https://github.com/swapkats/robin)
+
 **A hyper-opinionated Claude agent for building production-ready Next.js apps with DynamoDB.**
 
 Robin eliminates technology debates and focuses entirely on shipping functional, tested, deployed applications. No choices. No bikeshedding. Just production-ready code.
@@ -394,27 +397,33 @@ Robin considers a task complete when:
 
 ## Contributing
 
-Robin is open source and contributions are welcome, but remember:
+Robin is **open source** and welcomes contributions! But remember:
 
 **Robin is opinionated by design.**
 
-Pull requests that add "flexibility" or "alternative options" will likely be rejected. Robin's strength is in its constraints.
+Before contributing, please read our [Contributing Guidelines](CONTRIBUTING.md) to understand:
+- What contributions we accept (bug fixes, docs, templates)
+- What we reject (flexibility, configuration, alternative tech stacks)
+- How to submit PRs that align with Robin's philosophy
 
-Good contributions:
-- Bug fixes
-- Performance improvements
-- Better templates
+We also follow a [Code of Conduct](CODE_OF_CONDUCT.md) to maintain a welcoming community.
+
+**Quick Summary:**
+
+✅ **We Accept:**
+- Bug fixes and performance improvements
 - Documentation improvements
+- Better templates (within our stack)
 - Additional skills for the enforced stack
 
-Bad contributions:
-- Support for other frameworks
-- Configuration options
-- "Make it flexible"
+❌ **We Reject:**
+- Support for other frameworks or databases
+- Configuration options or flexibility
+- Weakening our opinions
 
 ## License
 
-MIT
+Robin is open source software licensed under the [MIT License](LICENSE).
 
 ## Credits
 
